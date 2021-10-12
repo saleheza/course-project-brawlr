@@ -8,8 +8,10 @@ public class UserManager {
      * @param user1 A user object representing the user that did the right swipe
      * @param user2 A user object representing the user that received a right swipe
      */
-    public static void addLike(User user1, User user2){
 
+
+    public static void addLike(User user1, User user2){
+        user2.addLike(user1);
         // TODO: 10/11/2021
     }
     /**
@@ -20,6 +22,8 @@ public class UserManager {
      * @param user2 A user object representing the user that received a right swipe
      */
     public static void addMatch(User user1, User user2){
+        user2.addMatch(user1);
+        user1.addMatch(user2);
         // TODO: 10/11/2021
     }
     /**
@@ -29,6 +33,7 @@ public class UserManager {
      * @param user2 A user object representing the user that received a right swipe
      */
     public static void addSeenUser(User user1, User user2){
+        user1.addSeenUser(user2);
         // TODO: 10/11/2021
     }
 }
