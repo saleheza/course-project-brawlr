@@ -19,8 +19,8 @@ class UserManagerTest {
     @Test
     public void addLike() {
         HashMap<String, String> testMap = new HashMap<>();
-        User user1 = new User("u1", testMap, testMap, "", "", "");
-        User user2 = new User("u2", testMap, testMap, "", "", "");
+        User user1 = new User("u1", testMap, testMap, "", "", "", true);
+        User user2 = new User("u2", testMap, testMap, "", "", "", true);
         UserManager.addLike(user1, user2);
         assertTrue(user2.getLikes().contains(user1));
         UserManager.addLike(user2, user1);
