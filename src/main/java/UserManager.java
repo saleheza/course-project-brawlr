@@ -11,8 +11,13 @@ public class UserManager {
 
 
     public static void addLike(User user1, User user2){
-        user2.addLike(user1);
-        // TODO: 10/11/2021
+        user1.addSeenUser(user2);
+        if (user2.getLikes().contains(user1)){
+            UserManager.addMatch(user1, user2);
+        }
+        else {
+            user2.addLike(user1);
+        }
     }
     /**
      * this method takes 2 users; user1 and user2. It then adds user1 to user2's matches map and adds
@@ -24,7 +29,6 @@ public class UserManager {
     public static void addMatch(User user1, User user2){
         user2.addMatch(user1);
         user1.addMatch(user2);
-        // TODO: 10/11/2021
     }
     /**
      * this method takes 2 users; user1 and user2. It then adds user2 to user1's seenUsers map
@@ -34,6 +38,5 @@ public class UserManager {
      */
     public static void addSeenUser(User user1, User user2){
         user1.addSeenUser(user2);
-        // TODO: 10/11/2021
     }
 }
