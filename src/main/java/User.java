@@ -11,9 +11,10 @@ public class User {
     private ArrayList<User> seenUsers;
     private ArrayList<User> likes;
     private ArrayList<User> matches;
+    private boolean isLoggedIn;
 
     public User(String id, HashMap<String, String> loginInfo, HashMap<String, String> personalStats,
-                String fightingStyle, String biography, String controversialOpinions){
+                String fightingStyle, String biography, String controversialOpinions, boolean isLoggedIn){
         this.id = id;
         this.loginInfo = loginInfo;
         this.personalStats = personalStats;
@@ -23,6 +24,7 @@ public class User {
         this.seenUsers = new ArrayList<>();
         this.likes = new ArrayList<>();
         this.matches = new ArrayList<>();
+        this.isLoggedIn = false;
     }
 
     public String getId(){
@@ -91,5 +93,17 @@ public class User {
 
     public void addMatch(User user){
         this.matches.add(user);
+    }
+
+    public void logIn(){
+        this.isLoggedIn = true;
+    }
+
+    public void logOut(){
+        this.isLoggedIn = false;
+    }
+
+    public boolean loggedIn(){
+        return this.isLoggedIn;
     }
 }

@@ -9,8 +9,8 @@ class UserTest {
     @org.junit.jupiter.api.Test
     void addSeenUser() {
         HashMap<String, String> testMap = new HashMap<>();
-        User u1 = new User("u1", testMap, testMap, "", "", "");
-        User u2 = new User("u2", testMap, testMap, "", "", "");
+        User u1 = new User("u1", testMap, testMap, "", "", "", true);
+        User u2 = new User("u2", testMap, testMap, "", "", "", true);
         ArrayList<User> testList = new ArrayList<>();
 
         u1.addSeenUser(u2);
@@ -21,8 +21,8 @@ class UserTest {
     @org.junit.jupiter.api.Test
     void addLike() {
         HashMap<String, String> testMap = new HashMap<>();
-        User u1 = new User("u1", testMap, testMap, "", "", "");
-        User u2 = new User("u2", testMap, testMap, "", "", "");
+        User u1 = new User("u1", testMap, testMap, "", "", "", true);
+        User u2 = new User("u2", testMap, testMap, "", "", "", true);
         ArrayList<User> testList = new ArrayList<>();
 
         u1.addLike(u2);
@@ -33,8 +33,8 @@ class UserTest {
     @org.junit.jupiter.api.Test
     void addMatch() {
         HashMap<String, String> testMap = new HashMap<>();
-        User u1 = new User("u1", testMap, testMap, "", "", "");
-        User u2 = new User("u2", testMap, testMap, "", "", "");
+        User u1 = new User("u1", testMap, testMap, "", "", "", true);
+        User u2 = new User("u2", testMap, testMap, "", "", "", true);
         ArrayList<User> testList = new ArrayList<>();
 
         u1.addMatch(u2);
