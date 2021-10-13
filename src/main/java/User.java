@@ -2,15 +2,15 @@ import java.util.HashMap;
 import java.util.ArrayList;
 
 public class User {
-    private String id;
+    private final String id;
     private HashMap<String, String> loginInfo;
     private HashMap<String, String> personalStats;
     private String fightingStyle;
     private String biography;
     private String controversialOpinions;
-    private ArrayList<User> seenUsers;
-    private ArrayList<User> likes;
-    private ArrayList<User> matches;
+    private final ArrayList<User> seenUsers;
+    private final ArrayList<User> likes;
+    private final ArrayList<User> matches;
     private boolean isLoggedIn;
 
     public User(String id, HashMap<String, String> loginInfo, HashMap<String, String> personalStats,
@@ -26,6 +26,11 @@ public class User {
         this.matches = new ArrayList<>();
         this.isLoggedIn = false;
     }
+
+    /**
+     * getters and setters for User attributes
+     *
+     */
 
     public String getId(){
         return this.id;
