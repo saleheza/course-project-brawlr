@@ -3,11 +3,11 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 
 import java.util.HashMap;
-import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
-class ChatTest {
+public class ChatManagerTest {
 
     @BeforeEach
     void setUp() {
@@ -18,23 +18,24 @@ class ChatTest {
     }
 
     @Test()
-    public void testSendMessage() {
+    public void testCreateChat() {
         HashMap<String, String> testMap = new HashMap<>();
         User u1 = new User("u1", testMap, testMap, "", "", "", true);
         User u2 = new User("u2", testMap, testMap, "", "", "", true);
-        Chat c1 = new Chat(u1, u2);
-        c1.SendMessage(u1, u2, "Hello, I'm here.", true);
-        c1.SendMessage(u1, u2, "Hi, I'm here as well.", true);
-        assertEquals(c1.history.size(), 2);
+        ChatManager cm1 = new ChatManager(u1);
+        cm1.createChat(u2);
+        Chat newChat = new Chat(u1, u2);
+        assertEquals(cm1.conversations.get(u1), newChat);
     }
 
     @Test()
-    public void testDisplayLog() {
+    public void testDeleteChat() {
         HashMap<String, String> testMap = new HashMap<>();
         User u1 = new User("u1", testMap, testMap, "", "", "", true);
         User u2 = new User("u2", testMap, testMap, "", "", "", true);
-        Chat c1 = new Chat(u1, u2);
-        List<String> chatLog = c1.DisplayLog();
-        assertEquals(chatLog, c1.history);
+        ChatManager cm1 = new ChatManager(u1);
+        cm1.createChat(u2);
+        cm1.deleteChat(u2);
+        assertFalse(cm1.conversations.containsKey(u2));
     }
 }
