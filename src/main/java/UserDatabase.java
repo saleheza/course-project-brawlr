@@ -2,11 +2,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class UserDatabase {
+    // ramy: should the users map be final if you're gonna be adding to it?
     private final Map<String, User> users = new HashMap<>();
-
 
     /**
      * Add a user to this user list.
+     *
      * @param user the user to add
      */
     public void add(User user) {
@@ -21,6 +22,3 @@ public class UserDatabase {
         return users.get(ID);
     }
 }
-
-
-
