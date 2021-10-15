@@ -53,6 +53,5 @@ public class InputManager {
         System.out.println("Please enter your password:");
         String pass = in.nextLine();
 
-        //brawlr.brawlr.InputManager call for existing brawlr.User
     }
 }

@@ -15,10 +15,10 @@ public class Brawlr {
         while (loop) {
             System.out.println("Do you have an account with us? (Type 1 for yes, 0 for no)");
             String response = in.nextLine();
-            if (response == "1") {
+            if (response.equals("1")) {
                 ViewManager.displayLogin();
                 loop = false;
-            } else if (response == "0") {
+            } else if (response.equals("0")) {
                 ViewManager.displayUserCreation();
                 loop = false;
             } else {
