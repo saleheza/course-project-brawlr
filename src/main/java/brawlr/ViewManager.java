@@ -18,12 +18,12 @@ public class ViewManager {
          * */
         ChatView.displayChat();
     }
-    public static void displayCard(){
+    public static void displayCard(String userID){
         /*
          * Calls the UserCardView class to display the brawlr.User Card, where the user can see other
          * users' ProfileView displays
          * */
-        UserCardView.displayCard();
+        InputManager.displayCard();
     }
     public static void displayCardExtended(){
         /*
