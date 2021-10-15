@@ -8,9 +8,9 @@ public class User {
     private String fightingStyle;
     private String biography;
     private String controversialOpinions;
-    private final ArrayList<User> seenUsers;
-    private final ArrayList<User> likes;
-    private final ArrayList<User> matches;
+    private ArrayList<User> seenUsers;
+    private ArrayList<User> likes;
+    private ArrayList<User> matches;
     private boolean isLoggedIn;
 
     public User(String id, HashMap<String, String> loginInfo, HashMap<String, String> personalStats,
