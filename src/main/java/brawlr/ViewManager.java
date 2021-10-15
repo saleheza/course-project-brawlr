@@ -12,11 +12,11 @@ public class ViewManager {
         * */
         HomeView.displayHome();
     }
-    public static void displayChat(){
+    public static void displayChat(User user1, User user2){
         /*
          * Calls the ChatView class to display the brawlr.Chat screen
          * */
-        ChatView.displayChat();
+        ChatView.displayChat(user1, user2);
     }
     public static void displayCard(String userID){
         /*

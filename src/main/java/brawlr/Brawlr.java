@@ -2,13 +2,17 @@ package brawlr;
 
 import brawlr.ViewManager;
 
+import javax.swing.text.View;
 import java.util.*;
 public class Brawlr {
 
     public static void main(String[] args){
-        //Starts app and displays using ViewManager based on log in or register
-        //Scanner asks the user to log in, and overload main so you have two main methods.
-        //Based on swiperight and swipeleft command inputs, activate the UserManager's swiperight and swipeleft methods.
+        /*
+        Starts app and displays using ViewManager based on log in or register
+        Scanner asks the user to log in, and overload main so you have two main methods.
+        Based on swiperight and swipeleft command inputs, activate the UserManager's swiperight and swipeleft methods.
+        * */
+
 
         Scanner in = new Scanner(System.in);
         boolean loop = true;

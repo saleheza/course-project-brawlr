@@ -63,5 +63,13 @@ public class InputManager {
 
     public static void displayCard(){
 
+
+    }
+    public static void sendChatInput(){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Please input the message you would like to send: ");
+
+
+
     }
 }
