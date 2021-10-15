@@ -1,3 +1,5 @@
+package brawlr;
+
 import java.util.*;
 public class Brawlr {
 
