@@ -5,6 +5,11 @@ import java.util.Scanner;
 public class InputManager {
     //new user creation with User calls
     //swipe functionality
+
+    /**
+     * Takes user input to create a new instance of User
+     */
+
     public static void sendUserCreationInput(){
         Scanner in = new Scanner(System.in);
 
@@ -46,6 +51,9 @@ public class InputManager {
         UserDatabase.add(newUser);
     }
 
+    /**
+     * Takes user input to log in to an existing account (instance of user already in the database)
+     */
     public static void sendLoginInput(){
         Scanner in = new Scanner(System.in);
         System.out.println("Please enter your username:");
