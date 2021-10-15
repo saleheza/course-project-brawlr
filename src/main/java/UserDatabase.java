@@ -3,7 +3,7 @@ import java.util.Map;
 
 public class UserDatabase {
     // ramy: should the users map be final if you're gonna be adding to it?
-    private final Map<String, User> users = new HashMap<>();
+    private Map<String, User> users = new HashMap<>();
 
     /**
      * Add a user to this user list.
