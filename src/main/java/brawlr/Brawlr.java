@@ -13,15 +13,16 @@ public class Brawlr {
         Scanner in = new Scanner(System.in);
         boolean loop = true;
         int count = 0;
+        String currentUserID = new String();
         while (loop) {
             count += 1;
             System.out.println("Do you have an account with us? (Type 1 for yes, 0 for no)");
             String response = in.nextLine();
             if (response.equals("1")) {
-                String currentUserID = ViewManager.displayLogin();
+                currentUserID = ViewManager.displayLogin();
                 loop = false;
             } else if (response.equals("0")) {
-                String currentUserID = ViewManager.displayUserCreation();
+                currentUserID = ViewManager.displayUserCreation();
                 loop = false;
             } else {
                 System.out.println("Invalid response");
@@ -43,7 +44,7 @@ public class Brawlr {
 //            add swipe functionality
         }
         else if (response == "0"){
-            ViewManager.displayCard();
+            ViewManager.displayCard(currentUserID);
         }
 
         //calls brawlr.InputManager for swipes

@@ -60,4 +60,8 @@ public class InputManager {
         }
         return null;
     }
+
+    public static void displayCard(){
+
+    }
 }
