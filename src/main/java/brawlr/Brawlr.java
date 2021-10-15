@@ -36,7 +36,16 @@ public class Brawlr {
                 }
             }
         }
-        ViewManager.displayCard();
+        System.out.println("Would you like to start swiping (press 1) or would you prefer to " +
+                "chat with people you have mathed with (press 0)");
+        String response = in.nextLine();
+        if (response == "1"){
+//            add swipe functionality
+        }
+        else if (response == "0"){
+            ViewManager.displayCard();
+        }
+
         //calls brawlr.InputManager for swipes
         //calls LocationManager for nearest gym location
     }
