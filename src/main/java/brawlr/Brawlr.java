@@ -18,10 +18,10 @@ public class Brawlr {
             System.out.println("Do you have an account with us? (Type 1 for yes, 0 for no)");
             String response = in.nextLine();
             if (response.equals("1")) {
-                ViewManager.displayLogin();
+                String currentUserID = ViewManager.displayLogin();
                 loop = false;
             } else if (response.equals("0")) {
-                ViewManager.displayUserCreation();
+                String currentUserID = ViewManager.displayUserCreation();
                 loop = false;
             } else {
                 System.out.println("Invalid response");

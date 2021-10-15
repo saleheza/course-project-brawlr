@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class InputManager {
     //new user creation with User calls
     //swipe functionality
-    public static void sendUserCreationInput(){
+    public static String sendUserCreationInput(){
         Scanner in = new Scanner(System.in);
 
         System.out.println("Please enter your username:");
@@ -44,15 +44,20 @@ public class InputManager {
         String opinion = in.nextLine();
         User newUser = new User(userId, loginInfo, personalStats, fs, bio, opinion, true);
         UserDatabase.add(newUser);
+        return userId;
     }
 
-    public static void sendLoginInput(){
+    public static String sendLoginInput(){
         Scanner in = new Scanner(System.in);
         System.out.println("Please enter your username:");
         String userId = in.nextLine();
         System.out.println("Please enter your password:");
         String pass = in.nextLine();
-
-        //brawlr.brawlr.InputManager call for existing brawlr.User
+        boolean success = UserManager.login(userId, pass);
+        if (!success){
+            System.out.println("Successfuly logged in");
+            return userId;
+        }
+        return null;
     }
 }
