@@ -8,6 +8,6 @@ public class UserCreationView {
         System.out.println("Please enter your password:");
         String pass = in.nextLine();
         //Generate new user ID
-        //InputManager call for new User
+        //brawlr.InputManager call for new brawlr.User
     }
 }

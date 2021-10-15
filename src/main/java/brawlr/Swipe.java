@@ -1,3 +1,5 @@
+package brawlr;
+
 public class Swipe {
 
     public static void swipeRight(User user1, User user2){

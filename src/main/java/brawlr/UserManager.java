@@ -1,3 +1,5 @@
+package brawlr;
+
 public class UserManager {
     /**
      * this method takes 2 users; user1 and user2. First it adds user2 to user1's seenUsers map.
