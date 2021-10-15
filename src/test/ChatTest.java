@@ -1,3 +1,5 @@
+import brawlr.Chat;
+import brawlr.User;
 import org.junit.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -25,7 +27,7 @@ class ChatTest {
         Chat c1 = new Chat(u1, u2);
         c1.SendMessage(u1, u2, "Hello, I'm here.", true);
         c1.SendMessage(u1, u2, "Hi, I'm here as well.", true);
-        assertEquals(c1.history.size(), 2);
+        assertEquals(c1.DisplayLog().size(), 2);
     }
 
     @Test()
@@ -35,6 +37,6 @@ class ChatTest {
         User u2 = new User("u2", testMap, testMap, "", "", "", true);
         Chat c1 = new Chat(u1, u2);
         List<String> chatLog = c1.DisplayLog();
-        assertEquals(chatLog, c1.history);
+        assertEquals(chatLog, c1.DisplayLog());
     }
 }

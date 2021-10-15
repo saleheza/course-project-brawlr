@@ -8,6 +8,6 @@ public class LoginView{
         String userId = in.nextLine();
         System.out.println("Please enter your password:");
         String pass = in.nextLine();
-        //InputManager call for existing User
+        //brawlr.InputManager call for existing brawlr.User
     }
 }

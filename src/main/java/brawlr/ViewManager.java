@@ -1,3 +1,5 @@
+package brawlr;
+
 import Views.*;
 
 public class ViewManager {
@@ -12,13 +14,13 @@ public class ViewManager {
     }
     public static void displayChat(){
         /*
-         * Calls the ChatView class to display the Chat screen
+         * Calls the ChatView class to display the brawlr.Chat screen
          * */
         ChatView.displayChat();
     }
     public static void displayCard(){
         /*
-         * Calls the UserCardView class to display the User Card, where the user can see other
+         * Calls the UserCardView class to display the brawlr.User Card, where the user can see other
          * users' ProfileView displays
          * */
         UserCardView.displayCard();
@@ -38,7 +40,7 @@ public class ViewManager {
     }
     public static void displayProfile(){
         /*
-         * Calls the ProfileView class to display the User's profile with the personal information
+         * Calls the ProfileView class to display the brawlr.User's profile with the personal information
          * (pictures, biography, personal stats (height, weight, etc.), and controversial opinions)
          * */
         ProfileView.displayProfile();

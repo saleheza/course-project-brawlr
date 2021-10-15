@@ -1,3 +1,5 @@
+package brawlr;
+
 import java.util.HashMap;
 import java.util.ArrayList;
 
@@ -28,7 +30,7 @@ public class User {
     }
 
     /**
-     * getters and setters for User attributes
+     * getters and setters for brawlr.User attributes
      *
      */
 

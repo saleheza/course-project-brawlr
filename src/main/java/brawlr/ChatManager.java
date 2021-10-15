@@ -1,3 +1,5 @@
+package brawlr;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,12 +13,12 @@ public class ChatManager {
      */
     public Map<User, Chat> conversations = new HashMap<>();
     /**
-     * The user who is the current client of this ChatManager class.
+     * The user who is the current client of this brawlr.ChatManager class.
      */
     private User user1;
 
     /**
-     * A constructor for ChatManager class. Instantiates a new controller
+     * A constructor for brawlr.ChatManager class. Instantiates a new controller
      * for chatting for user1.
      * @param user1 Client user.
      */
