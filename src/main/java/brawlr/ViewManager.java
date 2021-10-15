@@ -36,7 +36,7 @@ public class ViewManager {
          * Calls the LoginView class to display the login screen, where the existing user is prompted to
          * input their login information
          * */
-        LoginView.displayLogin();
+        InputManager.sendLoginInput();
     }
     public static void displayProfile(){
         /*
