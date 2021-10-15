@@ -12,12 +12,12 @@ public class Brawlr {
         System.out.println("Do you have an account with us? (Type 0 for yes, 1 for no)");
         String response = in.nextLine();
         if (response == "0"){
-            ViewManager.LoginView.login();
+            ViewManager.displayLogin();
         }
         else{
-            ViewManager.UserCreationView.create();
+            ViewManager.displayUserCreation();
         }
-        UserCardView.view();
+        ViewManager.displayCard();
         //calls InputManager for swipes
         //calls LocationManager for nearest gym location
     }

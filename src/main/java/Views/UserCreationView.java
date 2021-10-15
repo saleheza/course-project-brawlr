@@ -1,7 +1,7 @@
 package Views;
 import java.util.*;
 public class UserCreationView {
-    public static void create(){
+    public static void displayUserCreation(){
         Scanner in = new Scanner(System.in);
         System.out.println("Please enter your username:");
         String userId = in.nextLine();
