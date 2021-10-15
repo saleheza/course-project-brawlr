@@ -1,6 +1,8 @@
 package brawlr;
 
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 import java.util.Scanner;
 public class InputManager {
     //new user creation with User calls
@@ -61,7 +63,24 @@ public class InputManager {
         return null;
     }
 
-    public static void displayCard(){
-
+    public static void displayCard(String userID){
+        Scanner in = new Scanner(System.in);
+        User mainUser = UserDatabase.getUser(userID);
+        Map<String, User> seenUsers = mainUser.getSeenUsers();
+        Map<String, User> unseenUsers = UserDatabase.getUnseenUsers(seenUsers);
+        for (User user : unseenUsers.values()){
+            user.print();
+            System.out.println("Do you want to fight them? press 1 if yes press 0 if no");
+            String swipe = in.nextLine();
+            if (Objects.equals(swipe, "1")){
+                UserManager.addLike(mainUser, user);
+                System.out.println("you successfully asked to fight them");
+            }
+            else {
+                UserManager.addSeenUser(mainUser, user);
+                System.out.println("you successfully avoided fighting them");
+            }
+        }
+        System.out.println("you have swipe through all users.");
     }
 }

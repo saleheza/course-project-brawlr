@@ -23,7 +23,7 @@ public class ViewManager {
          * Calls the UserCardView class to display the brawlr.User Card, where the user can see other
          * users' ProfileView displays
          * */
-        InputManager.displayCard();
+        InputManager.displayCard(userID);
     }
     public static void displayCardExtended(){
         /*

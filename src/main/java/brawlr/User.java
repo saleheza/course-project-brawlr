@@ -10,7 +10,7 @@ public class User {
     private String fightingStyle;
     private String biography;
     private String controversialOpinions;
-    private ArrayList<User> seenUsers;
+    private HashMap<String, User> seenUsers;
     private ArrayList<User> likes;
     private ArrayList<User> matches;
     private boolean isLoggedIn;
@@ -23,7 +23,7 @@ public class User {
         this.fightingStyle = fightingStyle;
         this.biography = biography;
         this.controversialOpinions = controversialOpinions;
-        this.seenUsers = new ArrayList<>();
+        this.seenUsers = new HashMap<String, User>();
         this.likes = new ArrayList<>();
         this.matches = new ArrayList<>();
         this.isLoggedIn = false;
@@ -58,7 +58,7 @@ public class User {
         return this.controversialOpinions;
     }
 
-    public ArrayList<User> getSeenUsers(){
+    public HashMap<String, User> getSeenUsers(){
         return this.seenUsers;
     }
 
@@ -90,13 +90,18 @@ public class User {
         this.controversialOpinions = controversialOpinions;
     }
 
+    public void print(){
+        System.out.println("Name is: " + this.id + "My biography is: " + this.biography +
+                "My controversial opinion is: " + this.controversialOpinions);
+    }
+
     /**
      *Takes a different instance of User, and to the seen users of this instance of User
      * @param user the user to add
      */
 
     public void addSeenUser(User user){
-        this.seenUsers.add(user);
+        this.seenUsers.put(user.getId(), user);
     }
 
     /**
