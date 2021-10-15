@@ -29,13 +29,12 @@ public class Brawlr {
             if (count >= 5){
                 System.out.println("Are you a monkey banging on a keyboard? (Type 1 to verify humanity)");
                 String monkey_response = in.nextLine();
-                if (monkey_response != "1"){
+                if (!(monkey_response.equals("1"))){
                     System.out.println("Monkeys have a higher strength to body-weight ratio than humans, " +
                             "giving them an unfair advantage in combat.");
                     break;
                 }
             }
-
         }
         ViewManager.displayCard();
         //calls brawlr.InputManager for swipes
