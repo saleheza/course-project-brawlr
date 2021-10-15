@@ -1,7 +1,5 @@
 package Views;
-
-import java.util.Scanner;
-
+import java.util.*;
 public class ChatView {
 
     public static void displayChat() {
