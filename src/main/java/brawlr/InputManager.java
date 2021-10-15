@@ -54,4 +54,9 @@ public class InputManager {
         String pass = in.nextLine();
 
     }
+    public static void sendChatInput(){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Please input the message you would like to send: ");
+
+    }
 }

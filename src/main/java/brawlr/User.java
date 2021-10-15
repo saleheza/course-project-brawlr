@@ -14,6 +14,7 @@ public class User {
     private ArrayList<User> likes;
     private ArrayList<User> matches;
     private boolean isLoggedIn;
+    private ChatManager userCM;
 
     public User(String id, HashMap<String, String> loginInfo, HashMap<String, String> personalStats,
                 String fightingStyle, String biography, String controversialOpinions, boolean isLoggedIn){
@@ -27,6 +28,7 @@ public class User {
         this.likes = new ArrayList<>();
         this.matches = new ArrayList<>();
         this.isLoggedIn = false;
+        this.userCM = new ChatManager(this);
     }
 
     /**
@@ -36,6 +38,10 @@ public class User {
 
     public String getId(){
         return this.id;
+    }
+
+    public ChatManager getuserCM(){
+        return this.userCM;
     }
 
     public HashMap<String, String> getLoginInfo(){
