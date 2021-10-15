@@ -8,8 +8,6 @@ public class UserCardView {
          * */
         //calls Database Manager to retrieve users' profiles and displays
     }
-    public static void displayExtendedCard() {
-    }
     public static void displayExtendedCard(){
         //wofewjuifwhe
     }

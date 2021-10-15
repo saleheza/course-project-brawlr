@@ -16,7 +16,7 @@ public class Brawlr {
             ViewManager.displayUserCreation();
         }
         ViewManager.displayCard();
-        //calls InputManager for swipes
+        //calls brawlr.InputManager for swipes
         //calls LocationManager for nearest gym location
     }
 }
